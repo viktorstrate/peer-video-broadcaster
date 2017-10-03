@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Peer Video Broadcaster</title>
+  </head>
+  <body>
+    <h1>Peer Video Broadcaster</h1>
+
+    <input id="peer-id" placeholder="Pick an id">
+    <button onClick="startStream()" disabled id="stream-button" >Start stream</button><br/>
+    <span id="status-label">Status: No status</span><br/>
+    <span id="error-label">Error: None</span><br/><br/>
+
+    <span id="watch-count">0 watching</span><br/>
+
+    <video autoplay id="preview" width="360" height="270" ></video>
+
+    <script>
+      require('./renderer.js')
+    </script>
+  </body>
+</html>

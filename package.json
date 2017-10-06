@@ -1,10 +1,12 @@
 {
-  "name": "electron-quick-start",
+  "name": "peer-video-broadcaster",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "Broadcast a video stream to clients, using WebRTC and Peerjs",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "package": "electron-packager . PeerVideoBroadcaster --all --out=builds/ --overwrite",
+    "package:mac": "electron-packager . PeerVideoBroadcaster --platform=darwin --out=builds/ --overwrite"
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
@@ -17,10 +19,12 @@
   "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "~1.7.8"
+    "electron": "~1.7.8",
+    "electron-packager": "^9.1.0"
   },
   "dependencies": {
     "dotenv": "^4.0.0",
+    "electron-debug": "^1.4.0",
     "peerjs": "^0.3.14"
   }
 }
